@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -59,8 +58,8 @@ public class LoginActivity extends AppCompatActivity {
                                 bundle.putString("userid", object.getString("id").toString());
 
 
-                                //send bundle data to BeYeu activity
-                                Intent intent = new Intent(LoginActivity.this, BeYeu.class);
+                                //send bundle data to BeYeuActivity activity
+                                Intent intent = new Intent(LoginActivity.this, BeYeuActivity.class);
                                 intent.putExtras(bundle);
                                 startActivity(intent);
 

@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class BeYeu extends AppCompatActivity {
+public class BeYeuActivity extends AppCompatActivity {
 
     TextView txtID;
 
