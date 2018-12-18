@@ -39,9 +39,7 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name=".BeYeuActivity" />
-        <activity android:name=".SoTiemActivity" />
-        <activity android:name=".TramXaActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

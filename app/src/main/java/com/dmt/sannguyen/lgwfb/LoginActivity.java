@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                                 //send bundle data to BeYeuActivity activity
-                                Intent intent = new Intent(LoginActivity.this, BeYeuActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 intent.putExtras(bundle);
                                 startActivity(intent);
 
