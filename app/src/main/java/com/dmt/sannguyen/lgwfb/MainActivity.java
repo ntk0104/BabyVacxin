@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private BeYeuFragment beYeuFragment;
     private SoTiemFragment soTiemFragment;
     private DiemTiemChungFragment diemTiemChungFragment;
+    private String userID;
 
 
     @Override
@@ -29,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         beYeuFragment = new BeYeuFragment();
         soTiemFragment = new SoTiemFragment();
         diemTiemChungFragment = new DiemTiemChungFragment();
+        //Receive Bundle data of user logged in
+        Bundle bundle = this.getIntent().getExtras();
+        // Receive the ID of user logged in
+        userID = bundle.getString("userid");
+        Log.d("Track", "UserID at mainActivity:" + userID);
 
         setFragment(beYeuFragment);
 
@@ -57,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setFragment(Fragment fragment) {
+
+        Bundle bundle = new Bundle();
+        bundle.putString("userid", userID);
+        fragment.setArguments(bundle);
+
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_frame, fragment);
         fragmentTransaction.commit();
