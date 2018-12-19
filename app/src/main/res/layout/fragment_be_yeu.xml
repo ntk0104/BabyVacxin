@@ -7,8 +7,22 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:textStyle="bold"
+        android:textColor="#faf8f8"
+        android:background="@color/colorPrimary"
+        android:textSize="23dp"
+        android:gravity="center"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Be yeu fragment" />
+        android:layout_height="45dp"
+        android:text="DANH SÁCH BÉ YÊU" />
+
+    <ImageView
+
+        android:id="@+id/imageView"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="330dp"
+        android:src="@android:drawable/ic_menu_add" />
 
 </FrameLayout>
