@@ -2,16 +2,18 @@ package com.dmt.sannguyen.lgwfb;
 
 public class TramXa {
     private int IDTramXa;
+    private String Ten;
     private String DiaChi;
     private String Street;
     private String Ward;
     private String District;
     private String City;
-    private float Xvalue;
-    private float Yvalue;
+    private long Xvalue;
+    private long Yvalue;
 
-    public TramXa(int IDTramXa, String diaChi, String street, String ward, String district, String city, float xvalue, float yvalue) {
+    public TramXa(int IDTramXa, String ten, String diaChi, String street, String ward, String district, String city, long xvalue, long yvalue) {
         this.IDTramXa = IDTramXa;
+        Ten = ten;
         DiaChi = diaChi;
         Street = street;
         Ward = ward;
@@ -27,6 +29,14 @@ public class TramXa {
 
     public void setIDTramXa(int IDTramXa) {
         this.IDTramXa = IDTramXa;
+    }
+
+    public String getTen() {
+        return Ten;
+    }
+
+    public void setTen(String ten) {
+        Ten = ten;
     }
 
     public String getDiaChi() {
@@ -69,19 +79,19 @@ public class TramXa {
         City = city;
     }
 
-    public float getXvalue() {
+    public long getXvalue() {
         return Xvalue;
     }
 
-    public void setXvalue(float xvalue) {
+    public void setXvalue(long xvalue) {
         Xvalue = xvalue;
     }
 
-    public float getYvalue() {
+    public long getYvalue() {
         return Yvalue;
     }
 
-    public void setYvalue(float yvalue) {
+    public void setYvalue(long yvalue) {
         Yvalue = yvalue;
     }
 }
