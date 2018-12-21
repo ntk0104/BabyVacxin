@@ -1,6 +1,7 @@
 package com.dmt.sannguyen.lgwfb;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -41,7 +42,7 @@ public class BeYeuFragment extends Fragment {
 
     private String userID;
     ArrayList<BeYeu> beYeuArrayList;
-    BeYeuAdapter adapter;
+    public BeYeuAdapter adapter;
 
 
     public BeYeuFragment() {
@@ -74,7 +75,10 @@ public class BeYeuFragment extends Fragment {
         view.findViewById(R.id.btnAddBaby).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("Track", "Btn is clicked in created");
+                Log.d("Track", "BtnAddBaby is clicked in created");
+                Intent intent = new Intent(getActivity().getApplicationContext(), ThemBabyActivity.class);
+                intent.putExtra("userid", userID);
+                startActivity(intent);
             }
         });
         ListView listviewBaby = view.findViewById(R.id.listviewBaby);
